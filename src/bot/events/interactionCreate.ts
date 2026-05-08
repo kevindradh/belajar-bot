@@ -49,7 +49,7 @@ export async function execute(interaction: Interaction) {
           .setLabel('Kode Solusi')
           .setStyle(TextInputStyle.Paragraph)
           .setRequired(true)
-          .setMaxLength(5000)
+          .setMaxLength(4000)
           .setPlaceholder('def solve(...):\n    # your code here');
 
         modal.addComponents(

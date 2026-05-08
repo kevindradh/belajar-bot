@@ -89,7 +89,12 @@ async function submitToJudge0(
   };
 
   if (JUDGE0_API_KEY) {
-    headers['X-Auth-Token'] = JUDGE0_API_KEY;
+    if (JUDGE0_API_URL.includes('rapidapi.com')) {
+      headers['x-rapidapi-host'] = new URL(JUDGE0_API_URL).host;
+      headers['x-rapidapi-key'] = JUDGE0_API_KEY;
+    } else {
+      headers['X-Auth-Token'] = JUDGE0_API_KEY;
+    }
   }
 
   const response = await axios.post(
@@ -112,7 +117,12 @@ async function submitToJudge0(
 async function pollResult(token: string, maxWaitMs: number = 10_000): Promise<any> {
   const headers: Record<string, string> = {};
   if (JUDGE0_API_KEY) {
-    headers['X-Auth-Token'] = JUDGE0_API_KEY;
+    if (JUDGE0_API_URL.includes('rapidapi.com')) {
+      headers['x-rapidapi-host'] = new URL(JUDGE0_API_URL).host;
+      headers['x-rapidapi-key'] = JUDGE0_API_KEY;
+    } else {
+      headers['X-Auth-Token'] = JUDGE0_API_KEY;
+    }
   }
 
   const startTime = Date.now();
