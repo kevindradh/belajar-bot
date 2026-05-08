@@ -1,0 +1,30 @@
+{
+  "slug": "longest-substring-no-repeat",
+  "title": "Longest Substring Without Repeating Characters",
+  "xp_reward": 200,
+  "description": "Diberikan string `s`, cari panjang **substring terpanjang** yang tidak memiliki karakter berulang.",
+  "constraints": "- 0 <= s.length <= 5 * 10^4\n- s berisi huruf, angka, simbol, dan spasi",
+  "examples": [
+    { "input": "s = 'abcabcbb'", "output": "3", "explanation": "'abc' dengan panjang 3" },
+    { "input": "s = 'bbbbb'", "output": "1" },
+    { "input": "s = 'pwwkew'", "output": "3" }
+  ],
+  "function_signatures": {
+    "python": "def solve(s):",
+    "javascript": "function solve(s) {"
+  },
+  "test_cases_public": [
+    { "input": ["abcabcbb"], "expected": 3 },
+    { "input": ["bbbbb"], "expected": 1 },
+    { "input": ["pwwkew"], "expected": 3 }
+  ],
+  "test_cases_hidden": [
+    { "input": [""], "expected": 0 },
+    { "input": ["a"], "expected": 1 },
+    { "input": ["dvdf"], "expected": 3 },
+    { "input": ["anviaj"], "expected": 5 }
+  ],
+  "hints": ["Gunakan teknik sliding window.", "Gunakan set atau hash map untuk track karakter di window saat ini."],
+  "tags": ["sliding-window", "hash-map", "string"],
+  "categories": ["sliding-window", "hash-map", "string"]
+}

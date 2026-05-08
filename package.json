@@ -1,0 +1,39 @@
+{
+  "name": "codedojo-bot",
+  "version": "1.0.0",
+  "description": "CodeDojo — Discord Coding Challenge Bot. Level up your code, one challenge at a time.",
+  "main": "dist/bot/index.js",
+  "scripts": {
+    "dev": "tsx watch src/bot/index.ts",
+    "build": "tsc",
+    "start": "node dist/bot/index.js",
+    "deploy-commands": "tsx scripts/deploy-commands.ts",
+    "seed": "tsx scripts/seed-challenges.ts"
+  },
+  "keywords": ["discord", "bot", "coding", "challenge", "judge0"],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.0.8",
+      "onFail": "download"
+    }
+  },
+  "type": "module",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.105.3",
+    "axios": "^1.16.0",
+    "discord.js": "^14.26.4",
+    "dotenv": "^17.4.2",
+    "node-cron": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@types/node-cron": "^3.0.11",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
+  }
+}

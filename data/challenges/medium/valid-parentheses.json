@@ -1,0 +1,30 @@
+{
+  "slug": "valid-parentheses",
+  "title": "Valid Parentheses",
+  "xp_reward": 180,
+  "description": "Diberikan string `s` yang hanya berisi karakter `(`, `)`, `{`, `}`, `[` dan `]`, tentukan apakah string tersebut valid.\n\nString valid jika:\n1. Setiap bracket buka ditutup dengan bracket yang sama jenisnya\n2. Bracket ditutup dalam urutan yang benar\n3. Setiap bracket tutup memiliki bracket buka yang sesuai",
+  "constraints": "- 1 <= s.length <= 10^4\n- s hanya berisi karakter '(){}[]'",
+  "examples": [
+    { "input": "s = '()'", "output": "true" },
+    { "input": "s = '()[]{}'", "output": "true" },
+    { "input": "s = '(]'", "output": "false" }
+  ],
+  "function_signatures": {
+    "python": "def solve(s):",
+    "javascript": "function solve(s) {"
+  },
+  "test_cases_public": [
+    { "input": ["()"], "expected": true },
+    { "input": ["()[]{}"], "expected": true },
+    { "input": ["(]"], "expected": false }
+  ],
+  "test_cases_hidden": [
+    { "input": ["([)]"], "expected": false },
+    { "input": ["{[]}"], "expected": true },
+    { "input": ["("], "expected": false },
+    { "input": ["))"], "expected": false }
+  ],
+  "hints": ["Gunakan stack.", "Push bracket buka ke stack. Saat ketemu bracket tutup, pop dan bandingkan."],
+  "tags": ["stack-queue", "string"],
+  "categories": ["stack-queue", "string"]
+}

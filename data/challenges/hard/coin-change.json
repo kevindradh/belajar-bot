@@ -1,0 +1,29 @@
+{
+  "slug": "coin-change",
+  "title": "Coin Change",
+  "xp_reward": 400,
+  "description": "Diberikan array integer `coins` yang merepresentasikan denominasi koin dan integer `amount` yang merepresentasikan jumlah uang.\n\nKembalikan **jumlah koin minimum** yang dibutuhkan untuk membuat `amount`. Jika tidak bisa dibuat, kembalikan `-1`.\n\nKamu bisa menggunakan setiap denominasi koin sebanyak tak terbatas.",
+  "constraints": "- 1 <= coins.length <= 12\n- 1 <= coins[i] <= 2^31 - 1\n- 0 <= amount <= 10^4",
+  "examples": [
+    { "input": "coins = [1,5,10], amount = 12", "output": "3", "explanation": "12 = 10 + 1 + 1" },
+    { "input": "coins = [2], amount = 3", "output": "-1" },
+    { "input": "coins = [1], amount = 0", "output": "0" }
+  ],
+  "function_signatures": {
+    "python": "def solve(coins, amount):",
+    "javascript": "function solve(coins, amount) {"
+  },
+  "test_cases_public": [
+    { "input": [[1,5,10], 12], "expected": 3 },
+    { "input": [[2], 3], "expected": -1 },
+    { "input": [[1], 0], "expected": 0 }
+  ],
+  "test_cases_hidden": [
+    { "input": [[1,2,5], 11], "expected": 3 },
+    { "input": [[186,419,83,408], 6249], "expected": 20 },
+    { "input": [[1], 1], "expected": 1 }
+  ],
+  "hints": ["Gunakan Dynamic Programming (bottom-up).", "Buat array dp[0..amount] dimana dp[i] = minimum koin untuk membuat jumlah i."],
+  "tags": ["dynamic-programming"],
+  "categories": ["dynamic-programming"]
+}

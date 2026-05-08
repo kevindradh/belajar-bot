@@ -1,0 +1,26 @@
+{
+  "slug": "fizzbuzz",
+  "title": "FizzBuzz",
+  "xp_reward": 50,
+  "description": "Tulis fungsi yang menerima integer `n` dan mengembalikan array string dari 1 sampai n:\n\n- Untuk kelipatan 3: `'Fizz'`\n- Untuk kelipatan 5: `'Buzz'`\n- Untuk kelipatan 3 dan 5: `'FizzBuzz'`\n- Selain itu: angka sebagai string",
+  "constraints": "- 1 <= n <= 10^4",
+  "examples": [
+    { "input": "n = 5", "output": "['1','2','Fizz','4','Buzz']" },
+    { "input": "n = 15", "output": "['1','2','Fizz','4','Buzz','Fizz','7','8','Fizz','Buzz','11','Fizz','13','14','FizzBuzz']" }
+  ],
+  "function_signatures": {
+    "python": "def solve(n):",
+    "javascript": "function solve(n) {"
+  },
+  "test_cases_public": [
+    { "input": [5], "expected": ["1","2","Fizz","4","Buzz"] },
+    { "input": [3], "expected": ["1","2","Fizz"] }
+  ],
+  "test_cases_hidden": [
+    { "input": [1], "expected": ["1"] },
+    { "input": [15], "expected": ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz"] }
+  ],
+  "hints": ["Cek kelipatan 15 (3*5) dulu sebelum cek 3 atau 5 secara terpisah.", "Gunakan modulo operator (%)."],
+  "tags": ["simulation", "math"],
+  "categories": ["simulation", "math"]
+}

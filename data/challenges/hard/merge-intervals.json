@@ -1,0 +1,26 @@
+{
+  "slug": "merge-intervals",
+  "title": "Merge Intervals",
+  "xp_reward": 350,
+  "description": "Diberikan array dari interval `intervals` dimana `intervals[i] = [start_i, end_i]`, gabungkan semua interval yang overlapping dan kembalikan array interval yang sudah digabung.",
+  "constraints": "- 1 <= intervals.length <= 10^4\n- intervals[i].length == 2\n- 0 <= start_i <= end_i <= 10^4",
+  "examples": [
+    { "input": "intervals = [[1,3],[2,6],[8,10],[15,18]]", "output": "[[1,6],[8,10],[15,18]]", "explanation": "[1,3] dan [2,6] overlap, digabung jadi [1,6]" }
+  ],
+  "function_signatures": {
+    "python": "def solve(intervals):",
+    "javascript": "function solve(intervals) {"
+  },
+  "test_cases_public": [
+    { "input": [[[1,3],[2,6],[8,10],[15,18]]], "expected": [[1,6],[8,10],[15,18]] },
+    { "input": [[[1,4],[4,5]]], "expected": [[1,5]] }
+  ],
+  "test_cases_hidden": [
+    { "input": [[[1,4],[0,4]]], "expected": [[0,4]] },
+    { "input": [[[1,4],[2,3]]], "expected": [[1,4]] },
+    { "input": [[[1,2]]], "expected": [[1,2]] }
+  ],
+  "hints": ["Sort intervals berdasarkan start time.", "Iterasi dan bandingkan end time interval saat ini dengan start time interval berikutnya."],
+  "tags": ["array", "sorting"],
+  "categories": ["array", "sorting"]
+}

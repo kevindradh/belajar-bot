@@ -1,0 +1,28 @@
+{
+  "slug": "count-vowels",
+  "title": "Count Vowels",
+  "xp_reward": 50,
+  "description": "Tulis fungsi yang menghitung jumlah huruf vokal (a, e, i, o, u) dalam sebuah string. Huruf besar dan kecil dihitung sama.",
+  "constraints": "- 0 <= s.length <= 10^5",
+  "examples": [
+    { "input": "s = 'hello'", "output": "2" },
+    { "input": "s = 'CodeDojo'", "output": "4" }
+  ],
+  "function_signatures": {
+    "python": "def solve(s):",
+    "javascript": "function solve(s) {"
+  },
+  "test_cases_public": [
+    { "input": ["hello"], "expected": 2 },
+    { "input": ["CodeDojo"], "expected": 4 }
+  ],
+  "test_cases_hidden": [
+    { "input": [""], "expected": 0 },
+    { "input": ["bcdfg"], "expected": 0 },
+    { "input": ["AEIOU"], "expected": 5 },
+    { "input": ["aEiOu"], "expected": 5 }
+  ],
+  "hints": ["Ubah string ke lowercase.", "Gunakan set untuk cek membership vokal."],
+  "tags": ["string"],
+  "categories": ["string"]
+}

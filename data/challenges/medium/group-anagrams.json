@@ -1,0 +1,25 @@
+{
+  "slug": "group-anagrams",
+  "title": "Group Anagrams",
+  "xp_reward": 200,
+  "description": "Diberikan array string `strs`, kelompokkan anagram bersama-sama.\n\nAnagram adalah kata yang dibentuk dari huruf yang sama dengan urutan berbeda.\n\nKembalikan hasil sebagai array of arrays. Urutan grup dan urutan dalam grup tidak penting.",
+  "constraints": "- 1 <= strs.length <= 10^4\n- 0 <= strs[i].length <= 100\n- strs[i] hanya berisi huruf kecil",
+  "examples": [
+    { "input": "strs = ['eat','tea','tan','ate','nat','bat']", "output": "[['eat','tea','ate'],['tan','nat'],['bat']]" }
+  ],
+  "function_signatures": {
+    "python": "def solve(strs):",
+    "javascript": "function solve(strs) {"
+  },
+  "test_cases_public": [
+    { "input": [["eat","tea","tan","ate","nat","bat"]], "expected": [["ate","eat","tea"],["nat","tan"],["bat"]] },
+    { "input": [[""]], "expected": [[""]] }
+  ],
+  "test_cases_hidden": [
+    { "input": [["a"]], "expected": [["a"]] },
+    { "input": [["abc","bca","cab","xyz","zyx"]], "expected": [["abc","bca","cab"],["xyz","zyx"]] }
+  ],
+  "hints": ["Gunakan sorted string sebagai key di hash map.", "Semua anagram akan memiliki sorted key yang sama."],
+  "tags": ["hash-map", "string", "sorting"],
+  "categories": ["hash-map", "string", "sorting"]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "reverse-string",
+  "title": "Reverse String",
+  "xp_reward": 50,
+  "description": "Tulis fungsi yang membalik sebuah string.\n\nMasukan berupa string `s`, kembalikan string yang sudah dibalik.",
+  "constraints": "- 1 <= s.length <= 10^5\n- s hanya berisi karakter ASCII printable",
+  "examples": [
+    { "input": "s = 'hello'", "output": "'olleh'" },
+    { "input": "s = 'CodeDojo'", "output": "'ojoDeDoC'" }
+  ],
+  "function_signatures": {
+    "python": "def solve(s):",
+    "javascript": "function solve(s) {"
+  },
+  "test_cases_public": [
+    { "input": ["hello"], "expected": "olleh" },
+    { "input": ["CodeDojo"], "expected": "ojoDeDoC" }
+  ],
+  "test_cases_hidden": [
+    { "input": ["a"], "expected": "a" },
+    { "input": ["ab"], "expected": "ba" },
+    { "input": ["racecar"], "expected": "racecar" }
+  ],
+  "hints": ["Python: gunakan slicing s[::-1]", "JavaScript: gunakan split('').reverse().join('')"],
+  "tags": ["string"],
+  "categories": ["string"]
+}

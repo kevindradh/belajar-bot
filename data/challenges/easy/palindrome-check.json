@@ -1,0 +1,30 @@
+{
+  "slug": "palindrome-check",
+  "title": "Palindrome Check",
+  "xp_reward": 60,
+  "description": "Tulis fungsi yang mengecek apakah sebuah string adalah **palindrome**.\n\nPalindrome adalah string yang dibaca sama dari depan dan belakang. Abaikan case (huruf besar/kecil).",
+  "constraints": "- 1 <= s.length <= 10^5\n- s hanya berisi huruf dan angka",
+  "examples": [
+    { "input": "s = 'racecar'", "output": "true" },
+    { "input": "s = 'hello'", "output": "false" },
+    { "input": "s = 'Madam'", "output": "true" }
+  ],
+  "function_signatures": {
+    "python": "def solve(s):",
+    "javascript": "function solve(s) {"
+  },
+  "test_cases_public": [
+    { "input": ["racecar"], "expected": true },
+    { "input": ["hello"], "expected": false },
+    { "input": ["Madam"], "expected": true }
+  ],
+  "test_cases_hidden": [
+    { "input": ["a"], "expected": true },
+    { "input": ["ab"], "expected": false },
+    { "input": ["AbBa"], "expected": true },
+    { "input": ["12321"], "expected": true }
+  ],
+  "hints": ["Ubah string ke lowercase dulu.", "Bandingkan string dengan versi terbaliknya."],
+  "tags": ["string", "two-pointer"],
+  "categories": ["string", "two-pointer"]
+}
