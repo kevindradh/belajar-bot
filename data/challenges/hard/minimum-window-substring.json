@@ -1,0 +1,32 @@
+{
+  "slug": "minimum-window-substring",
+  "title": "Minimum Window Substring",
+  "xp_reward": 450,
+  "description": "Diberikan dua string `s` dan `t` dengan panjang `m` dan `n`, kembalikan **substring sekecil mungkin** di `s` sehingga setiap karakter di `t` (termasuk duplikatnya) disertakan dalam substring tersebut. Jika tidak ada substring seperti itu, kembalikan string kosong `\"\"`.\n\nTes kasus akan dibuat sedemikian rupa sehingga jawabannya unik.",
+  "constraints": "- m == s.length\n- n == t.length\n- 1 <= m, n <= 10^5\n- s dan t hanya terdiri dari huruf Inggris besar dan kecil.",
+  "examples": [
+    { "input": "s = 'ADOBECODEBANC', t = 'ABC'", "output": "'BANC'" },
+    { "input": "s = 'a', t = 'a'", "output": "'a'" },
+    { "input": "s = 'a', t = 'aa'", "output": "''" }
+  ],
+  "function_signatures": {
+    "python": "def solve(s, t):",
+    "javascript": "function solve(s, t) {"
+  },
+  "test_cases_public": [
+    { "input": ["ADOBECODEBANC", "ABC"], "expected": "BANC" },
+    { "input": ["a", "a"], "expected": "a" },
+    { "input": ["a", "aa"], "expected": "" }
+  ],
+  "test_cases_hidden": [
+    { "input": ["bba", "ab"], "expected": "ba" },
+    { "input": ["ab", "b"], "expected": "b" },
+    { "input": ["cgccab", "cba"], "expected": "cab" }
+  ],
+  "hints": [
+    "Gunakan teknik Sliding Window dengan dua pointer, `left` dan `right`.",
+    "Gunakan Hash Map untuk menghitung karakter yang dibutuhkan dari string t."
+  ],
+  "tags": ["string", "sliding-window", "hash-map"],
+  "categories": ["string", "sliding-window", "hash-map"]
+}

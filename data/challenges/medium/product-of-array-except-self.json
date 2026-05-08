@@ -1,0 +1,29 @@
+{
+  "slug": "product-of-array-except-self",
+  "title": "Product of Array Except Self",
+  "xp_reward": 240,
+  "description": "Diberikan array integer `nums`, kembalikan array `answer` di mana `answer[i]` sama dengan hasil kali semua elemen `nums` **kecuali** `nums[i]`.\n\nAlgoritma yang ditulis harus berjalan dengan kompleksitas waktu `O(n)` dan **tanpa menggunakan operasi pembagian**.",
+  "constraints": "- 2 <= nums.length <= 10^5\n- -30 <= nums[i] <= 30\n- Produk dari semua prefix atau suffix array muat di dalam integer 32-bit.",
+  "examples": [
+    { "input": "nums = [1,2,3,4]", "output": "[24,12,8,6]" },
+    { "input": "nums = [-1,1,0,-3,3]", "output": "[0,0,9,0,0]" }
+  ],
+  "function_signatures": {
+    "python": "def solve(nums):",
+    "javascript": "function solve(nums) {"
+  },
+  "test_cases_public": [
+    { "input": [[1,2,3,4]], "expected": [24,12,8,6] },
+    { "input": [[-1,1,0,-3,3]], "expected": [0,0,9,0,0] }
+  ],
+  "test_cases_hidden": [
+    { "input": [[2,3,4,5]], "expected": [60,40,30,24] },
+    { "input": [[0,0]], "expected": [0,0] }
+  ],
+  "hints": [
+    "Hitung produk prefix (produk dari kiri ke kanan).",
+    "Lalu kalikan dengan produk suffix (produk dari kanan ke kiri)."
+  ],
+  "tags": ["array", "prefix-sum"],
+  "categories": ["array", "prefix-sum"]
+}

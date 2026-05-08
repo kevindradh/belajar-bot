@@ -1,0 +1,30 @@
+{
+  "slug": "valid-anagram",
+  "title": "Valid Anagram",
+  "xp_reward": 55,
+  "description": "Diberikan dua string `s` dan `t`, kembalikan `true` jika `t` adalah anagram dari `s`, dan `false` jika bukan.\n\nAnagram adalah kata atau frasa yang dibentuk dengan menyusun ulang huruf dari kata atau frasa lain, biasanya menggunakan semua huruf asli tepat satu kali.",
+  "constraints": "- 1 <= s.length, t.length <= 5 * 10^4\n- s dan t hanya terdiri dari huruf kecil bahasa Inggris.",
+  "examples": [
+    { "input": "s = 'anagram', t = 'nagaram'", "output": "true" },
+    { "input": "s = 'rat', t = 'car'", "output": "false" }
+  ],
+  "function_signatures": {
+    "python": "def solve(s, t):",
+    "javascript": "function solve(s, t) {"
+  },
+  "test_cases_public": [
+    { "input": ["anagram", "nagaram"], "expected": true },
+    { "input": ["rat", "car"], "expected": false }
+  ],
+  "test_cases_hidden": [
+    { "input": ["a", "a"], "expected": true },
+    { "input": ["ab", "a"], "expected": false },
+    { "input": ["aacc", "ccac"], "expected": false }
+  ],
+  "hints": [
+    "Jika panjang string berbeda, pasti bukan anagram.",
+    "Gunakan hash map atau array frekuensi huruf untuk menghitung kemunculan setiap karakter."
+  ],
+  "tags": ["string", "hash-map"],
+  "categories": ["string", "hash-map"]
+}

@@ -1,0 +1,31 @@
+{
+  "slug": "three-sum",
+  "title": "3Sum",
+  "xp_reward": 250,
+  "description": "Diberikan sebuah array integer `nums`, kembalikan semua triplet `[nums[i], nums[j], nums[k]]` sedemikian rupa sehingga `i != j`, `i != k`, dan `j != k`, dan `nums[i] + nums[j] + nums[k] == 0`.\n\nPerhatikan bahwa kumpulan solusi **tidak boleh mengandung triplet yang duplikat**.",
+  "constraints": "- 3 <= nums.length <= 3000\n- -10^5 <= nums[i] <= 10^5",
+  "examples": [
+    { "input": "nums = [-1,0,1,2,-1,-4]", "output": "[[-1,-1,2],[-1,0,1]]" },
+    { "input": "nums = [0,1,1]", "output": "[]" },
+    { "input": "nums = [0,0,0]", "output": "[[0,0,0]]" }
+  ],
+  "function_signatures": {
+    "python": "def solve(nums):",
+    "javascript": "function solve(nums) {"
+  },
+  "test_cases_public": [
+    { "input": [[-1,0,1,2,-1,-4]], "expected": [[-1,-1,2],[-1,0,1]] },
+    { "input": [[0,1,1]], "expected": [] },
+    { "input": [[0,0,0]], "expected": [[0,0,0]] }
+  ],
+  "test_cases_hidden": [
+    { "input": [[-2,0,1,1,2]], "expected": [[-2,0,2],[-2,1,1]] },
+    { "input": [[-1,0,1,0]], "expected": [[-1,0,1]] }
+  ],
+  "hints": [
+    "Urutkan array terlebih dahulu (sort).",
+    "Gunakan teknik two-pointers untuk mencari pasangan angka sisa setelah menentukan angka pertama."
+  ],
+  "tags": ["array", "two-pointer", "sorting"],
+  "categories": ["array", "two-pointer", "sorting"]
+}

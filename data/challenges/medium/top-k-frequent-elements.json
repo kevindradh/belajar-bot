@@ -1,0 +1,29 @@
+{
+  "slug": "top-k-frequent-elements",
+  "title": "Top K Frequent Elements",
+  "xp_reward": 230,
+  "description": "Diberikan sebuah array integer `nums` dan integer `k`, kembalikan `k` elemen yang paling sering muncul di dalam array.\n\nAnda dapat mengembalikan jawabannya dalam urutan apa pun.",
+  "constraints": "- 1 <= nums.length <= 10^5\n- k berada di rentang [1, jumlah elemen unik di array].\n- Solusinya dijamin unik.",
+  "examples": [
+    { "input": "nums = [1,1,1,2,2,3], k = 2", "output": "[1,2]" },
+    { "input": "nums = [1], k = 1", "output": "[1]" }
+  ],
+  "function_signatures": {
+    "python": "def solve(nums, k):",
+    "javascript": "function solve(nums, k) {"
+  },
+  "test_cases_public": [
+    { "input": [[1,1,1,2,2,3], 2], "expected": [1,2] },
+    { "input": [[1], 1], "expected": [1] }
+  ],
+  "test_cases_hidden": [
+    { "input": [[4,1,-1,2,-1,2,3], 2], "expected": [-1,2] },
+    { "input": [[3,0,1,0], 1], "expected": [0] }
+  ],
+  "hints": [
+    "Hitung frekuensi kemunculan setiap angka menggunakan Hash Map.",
+    "Bisa diselesaikan menggunakan Min-Heap atau teknik Bucket Sort berdasarkan frekuensi."
+  ],
+  "tags": ["array", "hash-map", "sorting"],
+  "categories": ["array", "hash-map", "sorting"]
+}

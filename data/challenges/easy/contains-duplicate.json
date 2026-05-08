@@ -1,0 +1,30 @@
+{
+  "slug": "contains-duplicate",
+  "title": "Contains Duplicate",
+  "xp_reward": 50,
+  "description": "Diberikan array integer `nums`, kembalikan `true` jika setidaknya satu nilai muncul dua kali dalam array, dan kembalikan `false` jika setiap elemen unik.",
+  "constraints": "- 1 <= nums.length <= 10^5\n- -10^9 <= nums[i] <= 10^9",
+  "examples": [
+    { "input": "nums = [1,2,3,1]", "output": "true" },
+    { "input": "nums = [1,2,3,4]", "output": "false" }
+  ],
+  "function_signatures": {
+    "python": "def solve(nums):",
+    "javascript": "function solve(nums) {"
+  },
+  "test_cases_public": [
+    { "input": [[1,2,3,1]], "expected": true },
+    { "input": [[1,2,3,4]], "expected": false }
+  ],
+  "test_cases_hidden": [
+    { "input": [[1,1,1,3,3,4,3,2,4,2]], "expected": true },
+    { "input": [[10]], "expected": false },
+    { "input": [[-1, -2, -1]], "expected": true }
+  ],
+  "hints": [
+    "Gunakan struktur data Set untuk menyimpan angka yang sudah dilihat.",
+    "Jika ukuran Set tidak sama dengan ukuran array awal, maka ada duplikat."
+  ],
+  "tags": ["array", "hash-map"],
+  "categories": ["array", "hash-map"]
+}

@@ -1,0 +1,30 @@
+{
+  "slug": "search-in-rotated-sorted-array",
+  "title": "Search in Rotated Sorted Array",
+  "xp_reward": 250,
+  "description": "Terdapat array integer `nums` yang diurutkan secara menaik (ascending) (dengan elemen-elemen unik).\n\nSebelum diberikan ke Anda, `nums` mungkin diputar pada indeks tertentu, misalnya `[0,1,2,4,5,6,7]` bisa menjadi `[4,5,6,7,0,1,2]`.\n\nDiberikan array yang mungkin sudah diputar dan nilai `target`, kembalikan **indeks `target`** di dalam array. Jika tidak ada, kembalikan `-1`.\n\nAlgoritma Anda harus memiliki kompleksitas waktu `O(log n)`.",
+  "constraints": "- 1 <= nums.length <= 5000\n- -10^4 <= nums[i] <= 10^4\n- Semua elemen nums adalah unik.\n- nums dijamin dirotasi.",
+  "examples": [
+    { "input": "nums = [4,5,6,7,0,1,2], target = 0", "output": "4" },
+    { "input": "nums = [4,5,6,7,0,1,2], target = 3", "output": "-1" }
+  ],
+  "function_signatures": {
+    "python": "def solve(nums, target):",
+    "javascript": "function solve(nums, target) {"
+  },
+  "test_cases_public": [
+    { "input": [[4,5,6,7,0,1,2], 0], "expected": 4 },
+    { "input": [[4,5,6,7,0,1,2], 3], "expected": -1 }
+  ],
+  "test_cases_hidden": [
+    { "input": [[1], 0], "expected": -1 },
+    { "input": [[5,1,3], 5], "expected": 0 },
+    { "input": [[4,5,6,7,8,1,2,3], 8], "expected": 4 }
+  ],
+  "hints": [
+    "Gunakan modifikasi Binary Search.",
+    "Dalam array terotasi, minimal salah satu bagian (kiri dari mid atau kanan dari mid) selalu terurut dengan sempurna. Cek apakah target ada di bagian yang terurut tersebut."
+  ],
+  "tags": ["array", "binary-search"],
+  "categories": ["array", "binary-search"]
+}

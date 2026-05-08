@@ -1,0 +1,30 @@
+{
+  "slug": "majority-element",
+  "title": "Majority Element",
+  "xp_reward": 60,
+  "description": "Diberikan array `nums` berukuran `n`, kembalikan elemen mayoritas.\n\nElemen mayoritas adalah elemen yang muncul lebih dari `⌊n / 2⌋` kali. Anda dapat berasumsi bahwa elemen mayoritas selalu ada di dalam array.",
+  "constraints": "- n == nums.length\n- 1 <= n <= 5 * 10^4\n- -10^9 <= nums[i] <= 10^9",
+  "examples": [
+    { "input": "nums = [3,2,3]", "output": "3" },
+    { "input": "nums = [2,2,1,1,1,2,2]", "output": "2" }
+  ],
+  "function_signatures": {
+    "python": "def solve(nums):",
+    "javascript": "function solve(nums) {"
+  },
+  "test_cases_public": [
+    { "input": [[3,2,3]], "expected": 3 },
+    { "input": [[2,2,1,1,1,2,2]], "expected": 2 }
+  ],
+  "test_cases_hidden": [
+    { "input": [[5]], "expected": 5 },
+    { "input": [[6,5,5]], "expected": 5 },
+    { "input": [[8,8,7,7,7]], "expected": 7 }
+  ],
+  "hints": [
+    "Anda bisa menghitung frekuensi setiap elemen dengan Hash Map.",
+    "Bisa diselesaikan dengan algoritma Boyer-Moore Voting Algorithm dalam O(1) space."
+  ],
+  "tags": ["array", "hash-map"],
+  "categories": ["array", "hash-map"]
+}

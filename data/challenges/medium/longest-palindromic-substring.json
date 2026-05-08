@@ -1,0 +1,30 @@
+{
+  "slug": "longest-palindromic-substring",
+  "title": "Longest Palindromic Substring",
+  "xp_reward": 250,
+  "description": "Diberikan string `s`, temukan **substring terpanjang** dari `s` yang merupakan palindrom (dibaca sama dari kiri ke kanan maupun kanan ke kiri).",
+  "constraints": "- 1 <= s.length <= 1000\n- s hanya terdiri dari huruf Inggris dan angka.",
+  "examples": [
+    { "input": "s = 'babad'", "output": "'bab'", "explanation": "'aba' juga merupakan jawaban yang valid." },
+    { "input": "s = 'cbbd'", "output": "'bb'" }
+  ],
+  "function_signatures": {
+    "python": "def solve(s):",
+    "javascript": "function solve(s) {"
+  },
+  "test_cases_public": [
+    { "input": ["babad"], "expected": "bab" },
+    { "input": ["cbbd"], "expected": "bb" }
+  ],
+  "test_cases_hidden": [
+    { "input": ["a"], "expected": "a" },
+    { "input": ["ac"], "expected": "a" },
+    { "input": ["racecar"], "expected": "racecar" }
+  ],
+  "hints": [
+    "Coba teknik 'Expand Around Center'.",
+    "Untuk setiap karakter, anggap karakter itu sebagai titik tengah palindrom, dan rentangkan pointer ke kiri dan kanan selama karakternya sama."
+  ],
+  "tags": ["string", "dynamic-programming"],
+  "categories": ["string", "dynamic-programming"]
+}

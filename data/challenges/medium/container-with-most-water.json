@@ -1,0 +1,29 @@
+{
+  "slug": "container-with-most-water",
+  "title": "Container With Most Water",
+  "xp_reward": 220,
+  "description": "Anda diberikan array integer `height` berukuran `n`. Terdapat `n` garis vertikal, di mana setiap garis memiliki tinggi `height[i]`.\n\nCari dua garis yang bersama dengan sumbu-x membentuk sebuah kontainer, sehingga kontainer tersebut berisi air terbanyak.\n\nKembalikan **jumlah air maksimum** yang dapat ditampung oleh suatu kontainer.",
+  "constraints": "- n == height.length\n- 2 <= n <= 10^5\n- 0 <= height[i] <= 10^4",
+  "examples": [
+    { "input": "height = [1,8,6,2,5,4,8,3,7]", "output": "49", "explanation": "Garis vertikal terbaik berada di index 1 dan 8 (keduanya tinggi minimal 7), jarak = 7. Luas = 7 * 7 = 49." },
+    { "input": "height = [1,1]", "output": "1" }
+  ],
+  "function_signatures": {
+    "python": "def solve(height):",
+    "javascript": "function solve(height) {"
+  },
+  "test_cases_public": [
+    { "input": [[1,8,6,2,5,4,8,3,7]], "expected": 49 },
+    { "input": [[1,1]], "expected": 1 }
+  ],
+  "test_cases_hidden": [
+    { "input": [[4,3,2,1,4]], "expected": 16 },
+    { "input": [[1,2,1]], "expected": 2 }
+  ],
+  "hints": [
+    "Gunakan teknik two-pointers dari paling kiri dan paling kanan.",
+    "Pindahkan pointer yang memiliki garis lebih pendek agar memiliki kemungkinan mendapatkan luas area yang lebih besar."
+  ],
+  "tags": ["array", "two-pointer", "greedy"],
+  "categories": ["array", "two-pointer", "greedy"]
+}
