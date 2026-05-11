@@ -17,7 +17,7 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
             # Pindah ke direktori project di VPS
-            cd /root/belajar-bot/codedojo-bot
+            cd ~/belajar-bot
             
             # Ambil pembaruan terbaru dari GitHub
             git pull origin main
