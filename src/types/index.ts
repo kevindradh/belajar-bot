@@ -1,5 +1,5 @@
 // ============================================================
-// TypeScript Interfaces for CodeDojo Database
+// TypeScript Interfaces for CodeDojo Database (Test)
 // ============================================================
 
 export type DifficultyLevel = 'easy' | 'medium' | 'hard';
