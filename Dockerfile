@@ -1,5 +1,5 @@
 # Tahap 1: Build
-FROM node:20-alpine AS builder
+FROM node:22-alpine AS builder
 
 # Aktifkan pnpm via corepack
 RUN corepack enable && corepack prepare pnpm@11.0.8 --activate
@@ -20,7 +20,7 @@ COPY . .
 RUN pnpm build
 
 # Tahap 2: Production
-FROM node:20-alpine AS production
+FROM node:22-alpine AS production
 
 RUN corepack enable && corepack prepare pnpm@11.0.8 --activate
 
