@@ -6,8 +6,8 @@ import { resetWeeklyFreeze } from '../services/streak.service.js';
 import { buildDailyChallengeEmbed, buildChallengeButtons } from '../lib/embeds.js';
 
 export function startScheduler(client: Client) {
-  // Daily challenge — every day at 08:00 WIB (01:00 UTC)
-  cron.schedule('0 1 * * *', async () => {
+  // Daily challenge — every day at 08:00 WIB
+  cron.schedule('0 8 * * *', async () => {
     console.log('[SCHEDULER] Running daily challenge...');
     try {
       const { data: guilds } = await supabase
@@ -43,8 +43,7 @@ export function startScheduler(client: Client) {
   }, { timezone: 'Asia/Jakarta' });
 
   // Reset streak freeze — every Monday at 00:00 WIB
-  cron.schedule('0 17 * * 0', async () => {
-    // 17:00 UTC Sunday = 00:00 WIB Monday
+  cron.schedule('0 0 * * 1', async () => {
     console.log('[SCHEDULER] Resetting weekly streak freeze...');
     try {
       const count = await resetWeeklyFreeze();
