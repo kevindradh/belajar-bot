@@ -1,5 +1,6 @@
 import { Events, type Interaction, ModalBuilder, TextInputBuilder, TextInputStyle, ActionRowBuilder } from 'discord.js';
 import { activeChallenges } from '../../lib/utils.js';
+import { supabase } from '../../lib/supabase.js';
 
 export const name = Events.InteractionCreate;
 
@@ -23,7 +24,25 @@ export async function execute(interaction: Interaction) {
 
       if (customId === 'btn_submit') {
         // Show code submission modal
-        const activeChallenge = activeChallenges.get(interaction.user.id);
+        let activeChallenge = activeChallenges.get(interaction.user.id);
+        
+        if (!activeChallenge && interaction.message) {
+          // Check if this is a daily challenge message
+          const { data: daily } = await supabase
+            .from('daily_challenges')
+            .select('challenge_id')
+            .eq('message_id', interaction.message.id)
+            .single();
+            
+          if (daily) {
+            activeChallenges.set(interaction.user.id, {
+              challengeId: daily.challenge_id,
+              startedAt: new Date(),
+            });
+            activeChallenge = activeChallenges.get(interaction.user.id);
+          }
+        }
+
         if (!activeChallenge) {
           await interaction.reply({
             content: '❌ Kamu belum mengambil soal. Gunakan `/challenge` dulu.',
