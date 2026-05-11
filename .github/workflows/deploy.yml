@@ -23,4 +23,4 @@ jobs:
             git pull origin main
             
             # Build ulang dan jalankan container baru
-            docker compose up -d --build
+            docker-compose up -d --build
