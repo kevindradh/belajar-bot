@@ -38,6 +38,7 @@ export async function execute(interaction: Interaction) {
             activeChallenges.set(interaction.user.id, {
               challengeId: daily.challenge_id,
               startedAt: new Date(),
+              hintIndex: 0,
             });
             activeChallenge = activeChallenges.get(interaction.user.id);
           }
